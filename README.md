@@ -1,1 +1,1 @@
-# -generating-qrcode
+# generating-qrcode

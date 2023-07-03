@@ -1,0 +1,22 @@
+@page
+@model GenerateQrCodeModel
+@{
+    ViewData["Title"] = "Generate QR Code";
+}
+<h1>@ViewData["Title"]</h1>
+
+<form method="post">
+  <div class="form-floating mb-3">
+    <input asp-for="ContentQrCode" class="form-control" id="floatingInput" placeholder="Conteúdo QR Code">
+    <span asp-validation-for="ContentQrCode" class="text-danger"></span>
+    <label for="floatingInput">Content QR Code</label>
+  </div>
+  
+  <div class="col-12">
+      <button asp-page="RenderQrCode" class="btn btn-primary" type="submit">Generate QR Code</button>
+  </div>
+</form>
+
+@section scripts{
+   <partial name="_ValidationScriptsPartial" />
+}
